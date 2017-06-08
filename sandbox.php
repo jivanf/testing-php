@@ -1,10 +1,26 @@
 <?php
+$languages = ["JavaScript", "PHP", "HTML", "CSS", "C++"];
 
-$heredoc = <<< EOT 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget odio tincidunt tortor efficitur luctus nec at massa.
-Vivamus sit amet odio eleifend, rhoncus ligula vel, luctus orci. Sed in libero turpis.  
-EOT;
+for ($i = 0; $i < sizeof($languages); $i++) {
+    echo "$languages[$i] <br>";
+}
 
-echo $heredoc;
+print_r($languages);
+
+echo "<br>";
+
+//Separates first array from second array
+echo "<br>";
+
+//Adds 'Java' to languages array
+$languages[4] = "Java";
+
+for ($i = 0; $i < sizeof($languages); $i++) {
+    echo "$languages[$i] <br>";
+}
+
+print_r($languages);
+
+
 
 

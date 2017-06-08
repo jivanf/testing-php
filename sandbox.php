@@ -1,7 +1,14 @@
 <?php
 $number = 14;
 $color = "red";
-$adjective = "fat";
-echo "<strong> $color </strong> is a color<br>";
-echo "<strong> $number </strong> is a number<br>";
-echo "<strong> $adjective </strong> is an adjective<br>";
+$name = "Jivan";
+
+$message = "Name: $name <br>";
+$message .= "Fav. Color: $color <br>";
+$message .= "Answer: $number <br>";
+
+
+echo "Concatenating a number ($number) with a string ($name) in double quotes <br> ";
+echo 'Concatenating a number ' . $number . ' with a string '. $name . ' in single quotes <br>';
+echo $message;
+

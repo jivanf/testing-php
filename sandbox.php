@@ -1,26 +1,18 @@
 <?php
-$languages = ["JavaScript", "PHP", "HTML", "CSS", "C++"];
-
-for ($i = 0; $i < sizeof($languages); $i++) {
-    echo "$languages[$i] <br>";
-}
+$languages = [
+    "JavaScript" => "Scripting language",
+    "HTML" => "Markup language",
+    "CSS" => "Style sheet language",
+    "PHP" => "Server-side scripting language"
+];
 
 print_r($languages);
 
 echo "<br>";
 
-//Separates first array from second array
-echo "<br>";
-
-//Adds 'Java' to languages array
-$languages[4] = "Java";
-
-for ($i = 0; $i < sizeof($languages); $i++) {
-    echo "$languages[$i] <br>";
-}
+$languages["C++"] = "OOP language";
 
 print_r($languages);
-
 
 
 

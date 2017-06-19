@@ -1,4 +1,11 @@
 <?php
-$number = 25;
-$secondNumber = 50;
-echo $secondNumber ?? $number ?? "Can't find number variable.";
+// Convert $total_minutes to hours and minutes.
+
+$total_minutes = 640;
+$minutes = $total_minutes % 60;
+
+//$hours = $total_minutes / 60;
+$hours = intdiv($total_minutes, 60);
+
+
+echo "Time taken was " . round($hours) . " hours $minutes minutes";

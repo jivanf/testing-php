@@ -1,11 +1,13 @@
 <?php
-// Convert $total_minutes to hours and minutes.
-
-$total_minutes = 640;
-$minutes = $total_minutes % 60;
-
-//$hours = $total_minutes / 60;
-$hours = intdiv($total_minutes, 60);
-
-
-echo "Time taken was " . round($hours) . " hours $minutes minutes";
+$name = "JIVAN";
+$nameToLowerCase = strtolower($name);
+$nameToUpperCase = strtoupper($name);
+$name2 = ucfirst(strtolower($name
+));
+echo $name;
+echo "<br>";
+echo $nameToLowerCase;
+echo "<br>";
+echo $nameToUpperCase;
+echo "<br>";
+echo $name2;    

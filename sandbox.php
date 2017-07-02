@@ -1,16 +1,15 @@
-<?php
-echo 'Christmas in ' . date('Y') . ' will fall in: ' . date("l", strtotime("December 25"));
-echo "<br>";
+<!DOCTYPE html>
+<html lang="en">
 
-$date1 = new DateTime();
-$date2 = new DateTime();
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
 
-$newYorkTimezone = new DateTimeZone("America/New_York");
-$tijuanaTimezone = new DateTimeZone("America/Tijuana");
+<body>
+    <h1>Including external files</h1>
+    <p style="display: block;">This is part of sandbox.php</p>
+    <?php include_once 'includes/include.php'; ?>
+</body>
 
-$date1->setTimezone($tijuanaTimezone);
-$date2->setTimezone($newYorkTimezone);
-
-echo 'Time in Tijuana is: ' . $date1->format('g:ia');
-echo "<br>";
-echo 'Time in New York is: ' . $date2->format('g:ia ');
+</html>

@@ -1,11 +1,19 @@
 <?php
 
 require 'Car.php';
+require 'Ferrari.php';
+require 'Volkswagen.php';
 
-$car = new Car('Ferrari', 'white', '200 kp/h');
+$ferrari = new Ferrari('red', '200 kp/h');
+$volkswagen = new Volkswagen('white', '120 kp/h');
 
-echo "Brand of the car is: " . $car->brand;
-echo '<br>';
-echo "Color of the car is: " . $car->color;
-echo '<br>';
-echo "Speed of the car is: " . $car->speed;
+echo "Color of Ferrari is: " . $ferrari->color;
+echo "<br>";
+echo "Speed of Ferrari is: " . $ferrari->speed;
+echo "<br>";
+
+echo "<br>";
+
+echo "Color of Volkswagen is: " . $volkswagen->color;
+echo "<br>";
+echo "Speed of Volkswagen is: " . $volkswagen->speed;

@@ -1,30 +1,17 @@
 <?php
 
-require 'Car.php';
-require 'Engine.php';
-require 'Volkswagen.php';
-require 'Ferrari.php';
-
+function __autoload($class_name){
+    require $class_name . ".php";
+}
 
 $ferrari = new Ferrari('red', 200);
 $volkswagen = new Volkswagen('white', 120);
 
-function checkSpeed($car1, $car2) {
-    if ($car1->speed > $car2->speed) {
-        echo  get_class($car1) .  ' is faster than ' . get_class($car2);
-    }
+echo 'Color of ' . get_class($ferrari) . ' is: ' . $ferrari->getColor() . "<br>";
+echo 'Color of ' . get_class($volkswagen) . ' is: ' . $volkswagen->getColor() . "<br>";
 
-    else {
-        echo get_class($car2) . ' is faster than ' . get_class($car1);
-    }
+echo "<br>";
 
-    echo "<br>";
-}
+echo 'Speed of ' . get_class($ferrari) . ' is: ' . $ferrari->getSpeed() . "<br>";
+echo 'Speed of ' . get_class($volkswagen) . ' is: ' . $volkswagen->getSpeed() . "<br>";
 
-
-checkSpeed($ferrari, $volkswagen);
-
-$ferrari->speed = 150;
-$volkswagen->speed = 180;
-
-checkSpeed($ferrari, $volkswagen);

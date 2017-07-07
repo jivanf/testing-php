@@ -1,6 +1,7 @@
 <?php
 
-class Car {
+abstract class Car {
+
     public $color;
     public $speed;
 
@@ -8,5 +9,17 @@ class Car {
         $this->color = $color;
         $this->speed = $speed;
     }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+    }
+
+
 
 }

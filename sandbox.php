@@ -1,19 +1,13 @@
 <?php
 
-spl_autoload_register(function($class_name) {
-    require "{$class_name}.php";
-});
+// include composer autoload
+require 'vendor/autoload.php';
 
-$calc = new Calculator();
+// import the Intervention Image Manager Class
+use Intervention\Image\ImageManagerStatic as Image;
 
-/*
- * Valid strings for first argument in calculate function:
+$image = Image::make('img/leaf.png')->resize(900, 500)->save('img/leaf2.png');
 
- * addition
- * subtraction
- * multiplication
- * division
- */
 
-echo $calc->calculate('multiplication', 4, 4);
-
+echo "<img src='img/leaf.png'>";
+echo "<img src='img/leaf2.png'>";

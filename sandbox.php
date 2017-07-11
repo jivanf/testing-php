@@ -1,17 +1,19 @@
 <?php
 
-function __autoload($class_name){
-    require $class_name . ".php";
-}
+spl_autoload_register(function($class_name) {
+    require "{$class_name}.php";
+});
 
-$ferrari = new Ferrari('red', 200);
-$volkswagen = new Volkswagen('white', 120);
+$calc = new Calculator();
 
-echo 'Color of ' . get_class($ferrari) . ' is: ' . $ferrari->getColor() . "<br>";
-echo 'Color of ' . get_class($volkswagen) . ' is: ' . $volkswagen->getColor() . "<br>";
+/*
+ * Valid strings for first argument in calculate function:
 
-echo "<br>";
+ * addition
+ * subtraction
+ * multiplication
+ * division
+ */
 
-echo 'Speed of ' . get_class($ferrari) . ' is: ' . $ferrari->getSpeed() . "<br>";
-echo 'Speed of ' . get_class($volkswagen) . ' is: ' . $volkswagen->getSpeed() . "<br>";
+echo $calc->calculate('multiplication', 4, 4);
 
